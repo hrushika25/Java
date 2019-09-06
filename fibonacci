@@ -1,0 +1,36 @@
+public class Fibonacci {
+
+	void fiboDirect(int n){
+		int f1=1,f2,f0=0;
+		
+		
+		for(int i=0;i<n;i++){
+			System.out.println(f0);
+			f2=f0+f1;
+			f0=f1;
+			f1=f2;
+			}
+		
+		
+	}
+	
+	int fiborec(int n,int f0,int f1){
+	System.out.println(f0);
+	int f2=f0+f1;
+	n--;
+	if(n==0)
+		return 0;
+	else
+		
+	return fiborec(n,f1,f2);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		Fibonacci f=new Fibonacci();
+		f.fiboDirect(10);
+		f.fiborec(10, 0, 1);
+	}
+
+}
